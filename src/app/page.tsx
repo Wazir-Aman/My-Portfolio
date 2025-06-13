@@ -7,6 +7,7 @@ import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaClock } from "react-icons/fa"
 import { FaInstagram, FaFacebook, FaLinkedin, FaGithub } from "react-icons/fa";
 import { Typewriter } from 'react-simple-typewriter';
 import { Button } from "@/components/button";
+import Image from "next/image";
 import React from "react";
 
 export default function Portfolio() {
@@ -21,7 +22,12 @@ export default function Portfolio() {
 
     return () => clearInterval(interval);
   }, []);
+
   const [isOpen, setIsOpen] = useState(false);
+
+  const [showDetails, setShowDetails] = useState([false, false, false]);
+
+
   return <div>
     <header className="w-full fixed top-0 z-50">
       <nav className="bg-gray-800 text-white px-4 md:px-8 py-4 shadow-md ">
@@ -213,25 +219,86 @@ export default function Portfolio() {
         </h1>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
-        <div className="bg-gray-800 p-4 rounded-lg shadow-md hover:shadow-lg transition">
-          <h2 className="text-lg font-semibold mb-2">Service Title</h2>
-          <p className="text-gray-400 mb-4">Brief description of the service.</p>
-          <Button variant="primary" size="md" className="w-full">
-            Read More
+        {/* Web Development Card */}
+        <div className="bg-gray-800 p-4 rounded-lg shadow-md hover:shadow-lg transition text-white">
+          <h2 className="text-lg font-semibold mb-2">Web Development</h2>
+          <img
+            src="/frontend.jpg"
+            alt="Web development services"
+            width={400}
+            height={250}
+            className="rounded-md mb-3 w-full h-auto"
+          />
+          {showDetails[0] ? (
+            <p className="text-sm mt-2">
+              Crafting responsive and interactive frontend experiences using modern web technologies.
+              I build sleek, mobile-friendly websites using HTML, CSS, JavaScript, and React/Next.js — focused on clean design, speed, and usability.
+            </p>
+          ) : (
+            <p className="text-sm text-gray-400">Crafting responsive and interactive frontend experiences...</p>
+          )}
+          <Button
+            variant="primary"
+            size="md"
+            className="w-full mt-3"
+            onClick={() => setShowDetails([!showDetails[0], false, false])}
+          >
+            {showDetails[0] ? "Show Less" : "Read More"}
           </Button>
         </div>
-        <div className="bg-gray-800 p-4 rounded-lg shadow-md hover:shadow-lg transition">
-          <h2 className="text-lg font-semibold mb-2">Service Title</h2>
-          <p className="text-gray-400 mb-4">Brief description of the service.</p>
-          <Button variant="primary" size="md" className="w-full">
-            Read More
+
+        {/* Cybersecurity Card */}
+        <div className="bg-gray-800 p-4 rounded-lg shadow-md hover:shadow-lg transition text-white">
+          <h2 className="text-lg font-semibold mb-2">Cybersecurity Basics</h2>
+          <img
+            src="/cyber.jpg"
+            alt="Cybersecurity services"
+            width={400}
+            height={250}
+            className="rounded-md mb-3 w-full h-auto"
+          />
+          {showDetails[1] ? (
+            <p className="text-sm mt-2">
+              Beginner-friendly cybersecurity services to help secure your digital presence.
+              Offering basic security audits, vulnerability scanning, and awareness on safe web practices. Ideal for small sites, students, or startups taking their first step into secure development.
+            </p>
+          ) : (
+            <p className="text-sm text-gray-400">Beginner-friendly cybersecurity services...</p>
+          )}
+          <Button
+            variant="primary"
+            size="md"
+            className="w-full mt-3"
+            onClick={() => setShowDetails([false, !showDetails[1], false])}
+          >
+            {showDetails[1] ? "Show Less" : "Read More"}
           </Button>
         </div>
-        <div className="bg-gray-800 p-4 rounded-lg shadow-md hover:shadow-lg transition">
-          <h2 className="text-lg font-semibold mb-2">Service Title</h2>
-          <p className="text-gray-400 mb-4">Brief description of the service.</p>
-          <Button variant="primary" size="md" className="w-full">
-            Read More
+
+        {/* University Projects Card */}
+        <div className="bg-gray-800 p-4 rounded-lg shadow-md hover:shadow-lg transition text-white">
+          <h2 className="text-lg font-semibold mb-2">University Projects Help</h2>
+          <img
+            src="/unihelp.jpg"
+            alt="University project help services"
+            width={400}
+            height={250}
+            className="rounded-md mb-3 w-full h-auto"
+          />
+          {showDetails[2] ? (
+            <p className="text-sm mt-2">
+              From frontend web apps to database-driven projects and programming tasks — I'll help you build, explain, and deliver projects in HTML, JavaScript, MySQL, or any beginner-friendly tech stack.
+            </p>
+          ) : (
+            <p className="text-sm text-gray-400">From frontend web apps to database-driven projects...</p>
+          )}
+          <Button
+            variant="primary"
+            size="md"
+            className="w-full mt-3"
+            onClick={() => setShowDetails([false, false, !showDetails[2]])}
+          >
+            {showDetails[2] ? "Show Less" : "Read More"}
           </Button>
         </div>
       </div>
