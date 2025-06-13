@@ -44,7 +44,7 @@ export default function Portfolio() {
             <li className="hover:text-blue-300"><a href="#Contact">Contact</a></li>
             <li>
               <Button className="bg-blue-500 hover:bg-blue-600 transition">
-                <a href="/cv.pdf" target="_blank" rel="noopener noreferrer">View CV</a>
+                <a href="/CV.pdf" target="_blank" rel="noopener noreferrer">View CV</a>
               </Button>
             </li>
           </ul>
@@ -67,7 +67,7 @@ export default function Portfolio() {
             <li className="hover:text-blue-300"><a href="#Contact">Contact</a></li>
             <li>
               <Button className="bg-blue-500 hover:bg-blue-600 transition">
-                <a href="/cv.pdf" target="_blank" rel="noopener noreferrer">View CV</a>
+                <a href="/CV.pdf" target="_blank" rel="noopener noreferrer">View CV</a>
               </Button>
             </li>
           </ul>
