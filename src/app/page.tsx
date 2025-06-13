@@ -39,8 +39,8 @@ export default function Portfolio() {
           <ul className="hidden md:flex space-x-6 items-center">
             <li className="hover:text-blue-300"><a href="#About">About</a></li>
             <li className="hover:text-blue-300"><a href="#Skills">Skills</a></li>
-            <li className="hover:text-blue-300"><a href="#Services">Services</a></li>
             <li className="hover:text-blue-300"><a href="#Projects">Projects</a></li>
+            <li className="hover:text-blue-300"><a href="#Services">Services</a></li>
             <li className="hover:text-blue-300"><a href="#Contact">Contact</a></li>
             <li>
               <Button className="bg-blue-500 hover:bg-blue-600 transition">
@@ -62,8 +62,8 @@ export default function Portfolio() {
           <ul className="flex flex-col space-y-4 mt-4 md:hidden">
             <li className="hover:text-blue-300"><a href="#About">About</a></li>
             <li className="hover:text-blue-300"><a href="#Skills">Skills</a></li>
-            <li className="hover:text-blue-300"><a href="#Services">Services</a></li>
             <li className="hover:text-blue-300"><a href="#Projects">Projects</a></li>
+            <li className="hover:text-blue-300"><a href="#Services">Services</a></li>
             <li className="hover:text-blue-300"><a href="#Contact">Contact</a></li>
             <li>
               <Button className="bg-blue-500 hover:bg-blue-600 transition">
