@@ -187,8 +187,13 @@ export default function Portfolio() {
         <div className="bg-gray-800 p-4 rounded-lg shadow-md hover:shadow-lg transition">
           <h2 className="text-lg font-semibold mb-2">Automated GreenHouse</h2>
           <p className="text-gray-400 mb-4">My Final year project of University.</p>
-          <Button variant="primary" size="md" className="w-full">
-            <a href="my-fyp-lime.vercel.app">View Prooject</a>
+          <Button
+            onClick={() => window.open('https://my-fyp-lime.vercel.app', '_blank')}
+            variant="primary"
+            size="md"
+            className="w-full"
+          >
+            View Project
           </Button>
         </div>
         <div className="bg-gray-800 p-4 rounded-lg shadow-md hover:shadow-lg transition">
