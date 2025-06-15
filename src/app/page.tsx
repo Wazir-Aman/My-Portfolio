@@ -185,10 +185,10 @@ export default function Portfolio() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
         <div className="bg-gray-800 p-4 rounded-lg shadow-md hover:shadow-lg transition">
-          <h2 className="text-lg font-semibold mb-2">Project Title</h2>
-          <p className="text-gray-400 mb-4">Brief description of the project.</p>
+          <h2 className="text-lg font-semibold mb-2">Automated GreenHouse</h2>
+          <p className="text-gray-400 mb-4">My Final year project of University.</p>
           <Button variant="primary" size="md" className="w-full">
-            View Project
+            <a href="my-fyp-lime.vercel.app">View Prooject</a>
           </Button>
         </div>
         <div className="bg-gray-800 p-4 rounded-lg shadow-md hover:shadow-lg transition">
